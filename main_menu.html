@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="style.css/main_menu.css">
+    <script src="script.js/"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const gameMode = document.getElementById("game-mode");
+            const levelContainer = document.getElementById("level-container");
+
+            gameMode.addEventListener("change", function () {
+                if (gameMode.value === "player-vs-player") {
+                    levelContainer.style.display = "none";
+                } else {
+                    levelContainer.style.display = "block";
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div class="menu-container">
+        <h2 id="player-name">Hello, Player!</h2>
+
+        <div class="menu-content">
+            <!-- Left Side: Game Mode Selection -->
+            <div class="left-side">
+                <label for="game-mode">Game Mode:</label>
+                <select id="game-mode">
+                    <option value="player-vs-computer">Player vs Computer</option>
+                    <option value="player-vs-player">Player vs Player</option>
+                </select>
+
+                <!-- Difficulty selection (hidden when PvP is chosen) -->
+                <div id="level-container">
+                    <label for="level">Select Difficulty:</label>
+                    <select id="level">
+                        <option value="easy">Easy</option>
+                        <option value="normal">Normal</option>
+                        <option value="hard">Hard</option>
+                        <option value="extreme">Extreme</option>
+                        <option value="impossible">Impossible</option>
+                    </select>
+                </div>
+                
+                <button id="play-btn">Play</button>
+                <button id="exit-btn">Exit</button>
+            </div>
+
+            <!-- Right Side: Tic Tac Toe Box -->
+            <div class="right-side">
+                <h3 class="game-title">Tic Tac Toe</h3>
+                <div class="grid animated-board">
+                    <div class="cell">X</div> <div class="cell"></div> <div class="cell">O</div>
+                    <div class="cell"></div> <div class="cell">X</div> <div class="cell"></div>
+                    <div class="cell">O</div> <div class="cell"></div> <div class="cell">X</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const playButton = document.getElementById("play-btn");
+    
+            playButton.addEventListener("click", function () {
+                const selectedMode = document.getElementById("game-mode").value;
+                const selectedDifficulty = document.getElementById("level").value;
+    
+                let url = "game.html";
+    
+                // Check if it's "Player vs Computer", then add difficulty level
+                if (selectedMode === "player-vs-computer") {
+                    url += `?mode=computer&difficulty=${selectedDifficulty}`;
+                } else {
+                    url += `?mode=player`;
+                }
+    
+                // Redirect to game.html with parameters
+                window.location.href = url;
+            });
+        });
+    </script>
+    
+</body>
+</html>

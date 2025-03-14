@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Game</title>
+    <link rel="stylesheet" href="style.css/game.css">
+    <script defer src="script.js/game.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="title">Tic Tac Toe</h1>
+
+        <!-- Show selected game mode and difficulty -->
+        <h2 id="game-mode-display" class="game-mode-text"></h2>
+
+        <div class="scoreboard">
+            <span>Player Points: <span id="player-score">0</span></span>
+            <span>Computer Points: <span id="computer-score">0</span></span>
+        </div>
+
+        <h2 id="turn-indicator" class="turn-text">Your Turn (X)</h2>
+
+        <div class="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <div class="controls">
+            <button id="restart" class="btn">Restart</button>
+            <button id="main-menu" class="btn">Main Menu</button>
+        </div>
+    </div>
+</body>
+</html>

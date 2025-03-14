@@ -1,0 +1,179 @@
+/* 🌟 General Styling */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 📦 Main Container */
+.menu-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    width: 360px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* 🏆 Player Name Header */
+#player-name {
+    background: #e63a84;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* 🎮 Menu Layout */
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* 🔘 Left Side: Buttons & Selections */
+.left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* 🎮 Mode Selection */
+.mode-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.difficulty-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+}
+
+label {
+    font-size: 14px;
+}
+
+select {
+    padding: 6px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    transition: 0.3s;
+    width: 100%;
+    text-align: center;
+}
+
+select:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* 🕹️ Buttons */
+button {
+    width: 140px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#play-btn {
+    background: #38d700;
+    color: rgb(15, 1, 1);
+}
+
+#play-btn:hover {
+    background: #218838;
+}
+
+#exit-btn {
+    background: #dc3545;
+    color: white;
+}
+
+#exit-btn:hover {
+    background: #000000;
+}
+
+/* 🎮 Right Side: Tic Tac Toe Preview */
+.right-side {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.game-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 12px;
+}
+
+/* 🏆 Tic Tac Toe Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(3, 60px);
+    gap: 5px;
+    margin-top: 10px;
+    position: relative;
+}
+
+/* 🎭 X & O Styling */
+.cell {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.4);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 1.5s infinite alternate;
+}
+
+/* 🔄 Fade Effect */
+@keyframes fadeInOut {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+/* 🌊 Wave Animation */
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(1.5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-1.5deg); }
+    100% { transform: rotate(0deg); }
+}

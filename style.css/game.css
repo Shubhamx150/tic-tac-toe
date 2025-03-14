@@ -1,0 +1,84 @@
+/* Best UI Design for Game Page */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e5f5b5, hsl(47, 91%, 64%));
+    color: #9e0615;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    background: rgba(219, 30, 30, 0);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgb(8, 8, 8);
+}
+
+.title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #0033ff;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background: #ffffff;
+    color: #0fe782;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.cell:hover {
+    background: #20ace8;
+}
+
+.cell.winner {
+    color: #ff0000;
+    font-size: 3em;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.btn {
+    background: #307201;
+    color: #fcf7f7;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #000000;
+}
